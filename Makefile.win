@@ -1,16 +1,16 @@
-# Project: 2 PLAYER RACING
+# Project: test1
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = "car\ gmae.o"
-LINKOBJ  = "car gmae.o"
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lbgi -lgdi32 -luser32 -lwinmm -m32 -pg
+OBJ      = test1.o
+LINKOBJ  = test1.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lbgi -lgdi32 -luser32 -m32 -pg
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = "2 PLAYER RACING.exe"
-CXXFLAGS = $(CXXINCS) -m32 -pg -std=c++11 -fpermissive
+BIN      = test1.exe
+CXXFLAGS = $(CXXINCS) -m32 -pg
 CFLAGS   = $(INCS) -m32 -pg
 RM       = rm.exe -f
 
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-"car\ gmae.o": car\ gmae.cpp
-	$(CPP) -c "car gmae.cpp" -o "car gmae.o" $(CXXFLAGS)
+test1.o: test1.cpp
+	$(CPP) -c test1.cpp -o test1.o $(CXXFLAGS)
